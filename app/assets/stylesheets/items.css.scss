@@ -1,0 +1,41 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+form{
+  border: 1px solid #ddd;
+  padding-top: 1em;
+  .field_holder{
+    clear: both;
+    label{
+      width: 10em;
+      float: left;
+      text-align: right;
+      padding-top: .7em;
+      padding-right: 1em;
+    }
+    input{
+      font-size: 1em;
+      padding: .5em;
+      border: 1px solid #eee
+    }
+    input[type='checkbox']{
+      margin-top: .9em;
+    }
+    &.errors{
+      .error{
+        display: none;
+      }
+      input{
+        border: 1px solid red;
+      }
+    }
+  }
+  .actions{
+    margin-top: 1em;
+    border-top: 1px solid #eee;
+    padding-top: 1em;
+    padding-left: 11em;
+    padding-bottom: 1em;
+  }
+}

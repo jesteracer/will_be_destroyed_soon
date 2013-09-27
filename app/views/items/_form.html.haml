@@ -1,0 +1,23 @@
+= form_for resource, remote: true, data: {type: :json}, html: {class: :item} do |f|
+  #item_name_holder.field_holder
+    = f.label :name
+    = f.text_field :name
+    %span.error
+
+  #item_description_holder.field_holder
+    = f.label :description
+    = f.text_field :description
+    %span.error
+
+  #item_price_holder.field_holder
+    = f.label :price
+    = f.text_field :price
+    %span.error
+  
+  #item_active_holder.field_holder
+    = f.label :active
+    = f.check_box :active
+    %span.error
+
+  .actions
+    = f.submit
