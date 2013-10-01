@@ -9,8 +9,6 @@ class Lam.Views.ItemsIndex extends Backbone.View
    events:
      'click .edit_item': 'edit_item'
 
-  ttt: ->
-    console.log "sync!"
   render: ->
     $(@el).html(@template(items: @collection))
     this

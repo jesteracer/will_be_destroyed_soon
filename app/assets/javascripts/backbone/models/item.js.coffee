@@ -1,8 +1,9 @@
 class Lam.Models.Item extends Backbone.Model
   url: ->
-    u = "/items"
-    u = "/items/#{this.id}" if this.id
-    u
+    url = "/items"
+    url = "/items/#{this.id}" if this.id
+    url
+
   defaults:
     name: null
     description: null
