@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   respond_to :html, :json
 
   def index
+    render json: collection
   end
 
   def edit
