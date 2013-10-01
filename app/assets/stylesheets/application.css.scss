@@ -1,6 +1,13 @@
 @import "bourbon";
+@import "neat";
 
 body{
   font-family: $helvetica;
 }
 @import "items";
+
+section {
+  @include outer-container;
+  aside { @include span-columns(6); }
+  .wrapper { @include span-columns(6); }
+}

@@ -1,0 +1,11 @@
+%h1 Items ultimate app
+
+:javascript
+  var items = new Lam.Collections.ItemsCollection;
+  items.reset(#{Item.all.to_json});
+
+%section
+  %aside
+    #items_form
+  .wrapper
+    #items_index
