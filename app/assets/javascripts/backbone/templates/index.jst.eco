@@ -1,0 +1,15 @@
+<% for item in @items.models: %>
+  <div id="<%= item.get('id') %>" class="item_list <%= item.get('status')%>">
+    <h2>
+      <%= item.get('name') %>
+      /
+      <%= item.get('price') %>
+      руб.
+      <small>
+        <a class="edit_item" data-id="<%= item.get('id')%>">Редактировать</a> 
+      </small>
+    </h2>
+    <p><%= item.get('description')%></p>
+    <p class="errors">Возникли ошибки при сохранении... </p>
+  </div>
+<% end %>

@@ -1,6 +1,8 @@
 class Lam.Models.Item extends Backbone.Model
-  paramRoot: 'item'
-
+  url: ->
+    u = "/items"
+    u = "/items/#{this.id}" if this.id
+    u
   defaults:
     name: null
     description: null

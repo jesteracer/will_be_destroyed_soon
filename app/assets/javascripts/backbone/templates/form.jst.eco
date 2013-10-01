@@ -1,0 +1,27 @@
+<form accept-charset="UTF-8" action="/items" class="new_item" data-remote="true" data-type="json" id="item_form" method="post">
+    <input id="item_id" type="hidden" name="id" value="<%= @item.get('id')%>">
+    <div class="field_holder" id="item_name_holder">
+      <label for="item_name">Name</label>
+      <input id="item_name" name="item[name]" type="text" value="<%= @item.get('name')%>">
+      <span class="error"></span>
+    </div>
+    <div class="field_holder" id="item_description_holder">
+      <label for="item_description">Description</label>
+      <input id="item_description" name="item[description]" type="text" value="<%= @item.get('description')%>">
+      <span class="error"></span>
+    </div>
+    <div class="field_holder" id="item_price_holder">
+      <label for="item_price">Price</label>
+      <input id="item_price" name="item[price]" type="text" value="<%= @item.get('price')%>">
+      <span class="error"></span>
+    </div>
+    <div class="actions">
+      <% if @item.get('id'): %>
+        <a href="#" id="update_item">Сохранить</a>
+        или
+        <a href="#" id="change_form_to_create">Добавить</a>
+      <% else: %>
+        <a href="#" id="create_item">Добавить</a>
+      <% end %>
+    </div>
+  </form>

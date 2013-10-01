@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+a{
+  cursor: pointer;
+}
+.item_list{
+  border: 1px solid #eee;
+  margin-bottom: 1em;
+  padding: 1em;
+  .edit_item{
+    color: green;
+    border-bottom: 1px dashed;
+  }
+  .errors{
+    display: none;
+  }
+}
+.invalid{
+  background: #fef9ec;
+  .errors{
+    display: block;
+    color: #e85100;
+    font-size: .8em;
+  }
+}
 form{
   border: 1px solid #ddd;
   padding-top: 1em;

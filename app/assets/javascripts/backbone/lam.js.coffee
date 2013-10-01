@@ -9,3 +9,9 @@ window.Lam =
   Collections: {}
   Routers: {}
   Views: {}
+  init: ->
+    new Lam.Routers.ItemsRouter()
+    Backbone.history.start()
+
+$(document).ready ->
+  Lam.init()
